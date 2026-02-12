@@ -61,7 +61,7 @@ noButton.addEventListener("click", () => {
     boomSound.play();
 
     // Show The Rock GIF
-    mediaContainer.innerHTML = '<img src="public/images/the-rock.gif" alt="The Rock" style="width: 100%; max-width: 300px; border-radius: 10px;">';
+    mediaContainer.innerHTML = '<img src="assets/images/the-rock.gif" alt="The Rock" style="width: 100%; max-width: 300px; border-radius: 10px;">';
     mediaContainer.classList.remove("hidden");
     mediaContainer.style.top = "20%"; // Move GIF slightly lower (was 10%)
 
@@ -94,7 +94,7 @@ yesButton.addEventListener("click", () => {
 
     // Show AI Baby GIF
     mediaContainer.innerHTML = `
-        <img src="public/images/ai-baby.gif" alt="AI Baby" style="width: 100%; max-width: 800px; border-radius: 10px;">
+        <img src="assets/images/ai-baby.gif" alt="AI Baby" style="width: 100%; max-width: 800px; border-radius: 10px;">
         <div style="
             color: white; 
             margin-top: 20px; 
