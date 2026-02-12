@@ -85,6 +85,9 @@ yesButton.addEventListener("click", () => {
     // Hide everything else
     canvas.style.display = "none";
     responseButtons.style.display = "none";
+    // Also force hide the individual buttons just in case
+    yesButton.style.display = "none";
+    noButton.style.display = "none";
     mediaContainer.innerHTML = ''; // Clear previous GIF
     mediaContainer.classList.remove("hidden");
     mediaContainer.style.top = "50%"; // Reset position for Yes screen
@@ -98,7 +101,7 @@ yesButton.addEventListener("click", () => {
             font-size: 30px; 
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-        ">Alright, then I will see you Saturday</div>
+        ">Saturday is officially written in the stars. See you then!</div>
     `;
 
     // Center the container nicely for the final screen
@@ -203,6 +206,58 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["There is still a lifetime of things", "I want to uncover about you,"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("There is still a lifetime of things I want to uncover about you,", canvas.width / 2, canvas.height / 2);
+        }
+
+        opacity = opacity + 0.01;
+    }
+    if (frameNumber >= 2250 && frameNumber < 2500) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["There is still a lifetime of things", "I want to uncover about you,"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("There is still a lifetime of things I want to uncover about you,", canvas.width / 2, canvas.height / 2);
+        }
+
+        opacity = opacity - 0.01;
+    }
+
+    if (frameNumber == 2500) {
+        opacity = 0;
+    }
+    if (frameNumber > 2500 && frameNumber < 2750) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["but even the brief glimpse I’ve had", "so far has already filled", "my world completely."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("but even the brief glimpse I’ve had so far has already filled my world completely.", canvas.width / 2, canvas.height / 2);
+        }
+
+        opacity = opacity + 0.01;
+    }
+    if (frameNumber >= 2750 && frameNumber < 3000) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["but even the brief glimpse I’ve had", "so far has already filled", "my world completely."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("but even the brief glimpse I’ve had so far has already filled my world completely.", canvas.width / 2, canvas.height / 2);
+        }
+
+        opacity = opacity - 0.01;
+    }
+
+    if (frameNumber == 3000) {
+        opacity = 0;
+    }
+    if (frameNumber > 3000 && frameNumber < 3250) {
+        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+
+        if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["I like you so much, Jia,", "more than I can even", "put into words."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
             context.fillText("I like you so much, Jia, more than I can even put into words.", canvas.width / 2, canvas.height / 2);
@@ -210,7 +265,7 @@ function drawText() {
 
         opacity = opacity + 0.01;
     }
-    if (frameNumber >= 2250 && frameNumber < 2500) {
+    if (frameNumber >= 3250 && frameNumber < 3500) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
@@ -222,10 +277,10 @@ function drawText() {
         opacity = opacity - 0.01;
     }
 
-    if (frameNumber == 2500) {
+    if (frameNumber == 3500) {
         opacity = 0;
     }
-    if (frameNumber > 2500 && frameNumber < 99999) {
+    if (frameNumber > 3500 && frameNumber < 99999) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
@@ -237,7 +292,7 @@ function drawText() {
         opacity = opacity + 0.01;
     }
 
-    if (frameNumber >= 2750 && frameNumber < 99999) {
+    if (frameNumber >= 3750 && frameNumber < 99999) {
         context.fillStyle = `rgba(45, 45, 255, ${secondOpacity})`;
 
 
@@ -250,7 +305,7 @@ function drawText() {
         secondOpacity = secondOpacity + 0.01;
     }
 
-    if (frameNumber >= 3000 && frameNumber < 99999) {
+    if (frameNumber >= 4000 && frameNumber < 99999) {
         context.fillStyle = `rgba(45, 45, 255, ${thirdOpacity})`;
         context.fillText("", canvas.width / 2, (canvas.height / 2 + 120));
         thirdOpacity = thirdOpacity + 0.01;
