@@ -1,8 +1,10 @@
-html, body {
+html,
+body {
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden;
     cursor: url('./images/pointer.png'), auto;
+    background: #111;
 }
 
 canvas {
@@ -11,24 +13,58 @@ canvas {
     background: #111;
 }
 
-#valentinesButton {
+#response-buttons {
     display: none;
+    /* Initially hidden, script will set to flex */
     position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px;
+    z-index: 100;
+}
+
+#yesButton,
+#noButton {
     background-color: #2d2dff;
     border: 2px solid #2d2dff;
     color: #fff;
     cursor: pointer;
     height: 50px;
-    font-size: 16px;
+    width: 100px;
+    font-size: 18px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     border-radius: 10px;
-    top: calc(50% + 150px); /* Adjust based on canvas height and text position */
-    left: 50%;
-    transform: translateX(-50%);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
 
-  #valentinesButton:hover {
+#yesButton:hover,
+#noButton:hover {
     background-color: #1f1faa;
-    color: #eee;
+    transform: scale(1.1);
+}
+
+#media-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 90;
+    text-align: center;
+}
+
+#final-message {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    z-index: 100;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
 }

@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://raw.githubusercontent.com/sojijr/valentine-website/main/public/images/favicon.png">
-    <link rel="icon" href="public/images/favicon.png" type="image/x-icon" />  
-    <title>Happy Valentine's Day</title>
-    <link rel="stylesheet" href="public/style.css">
-  </head>
-  <body>
-    <canvas id="starfield"></canvas>
-    <button id="valentinesButton">Click Me! ❤</button>
-    <script src="script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/sojijr/valentine-website/main/public/images/favicon.png">
+  <link rel="icon" href="public/images/favicon.png" type="image/x-icon" />
+  <title>Happy Valentine's Day</title>
+  <link rel="stylesheet" href="public/style.css">
+</head>
+
+<body>
+  <canvas id="starfield"></canvas>
+  <div id="media-container" class="hidden"></div>
+  <div id="response-buttons" class="hidden">
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </div>
+  <div id="final-message" class="hidden"></div>
+  <audio id="sound-boom" src="public/images/boom.mp3"></audio>
+  <audio id="sound-bazooka" src="public/images/bazooka.mp3"></audio>
+  <img src="public/images/the-rock.gif" style="display:none;" />
+  <img src="public/images/ai-baby.gif" style="display:none;" />
+  <script src="script.js"></script>
+</body>
+
 </html>
