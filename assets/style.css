@@ -5,6 +5,7 @@ body {
     overflow: hidden;
     cursor: url('./images/pointer.png'), auto;
     background: #111;
+    font-family: 'Roboto', sans-serif;
 }
 
 canvas {

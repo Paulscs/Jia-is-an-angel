@@ -74,7 +74,7 @@ noButton.addEventListener("click", () => {
     feedback.style.color = "white";
     feedback.style.marginTop = "10px";
     feedback.style.fontSize = "20px";
-    feedback.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
+    feedback.style.fontFamily = "'Roboto', sans-serif";
     mediaContainer.appendChild(feedback);
 });
 
@@ -99,7 +99,7 @@ yesButton.addEventListener("click", () => {
             color: white; 
             margin-top: 20px; 
             font-size: 30px; 
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
         ">Saturday is officially written in the stars. See you then!</div>
     `;
@@ -123,7 +123,7 @@ function drawText() {
     var fontSize = Math.min(30, window.innerWidth / 24); // Adjust font size based on screen width
     var lineHeight = 8;
 
-    context.font = fontSize + "px Comic Sans MS";
+    context.font = fontSize + "px 'Roboto', sans-serif";
     context.textAlign = "center";
 
     // glow effect
@@ -134,13 +134,13 @@ function drawText() {
 
     if (frameNumber < 250) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("Every day I think about the astronomical odds...", canvas.width / 2, canvas.height / 2);
+        context.fillText("I find myself struck by the astronomical odds...", canvas.width / 2, canvas.height / 2);
         opacity = opacity + 0.01;
     }
     //fades out the text by decreasing the opacity
     if (frameNumber >= 250 && frameNumber < 500) {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("Every day I think about the astronomical odds...", canvas.width / 2, canvas.height / 2);
+        context.fillText("I find myself struck by the astronomical odds...", canvas.width / 2, canvas.height / 2);
         opacity = opacity - 0.01;
     }
 
@@ -258,9 +258,9 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I like you so much, Jia,", "more than I can even", "put into words."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["I like you a lot, Jia. ", "Probably more than I", "want to admit just yet."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("I like you so much, Jia, more than I can even put into words.", canvas.width / 2, canvas.height / 2);
+            context.fillText("I like you a lot, Jia. Probably more than I want to admit just yet.", canvas.width / 2, canvas.height / 2);
         }
 
         opacity = opacity + 0.01;
@@ -269,9 +269,9 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I like you so much, Jia,", "more than I can even", "put into words."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["I like you a lot, Jia. ", "Probably more than I", "want to admit just yet."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("I like you so much, Jia, more than I can even put into words.", canvas.width / 2, canvas.height / 2);
+            context.fillText("I like you a lot, Jia. Probably more than I want to admit just yet.", canvas.width / 2, canvas.height / 2);
         }
 
         opacity = opacity - 0.01;
@@ -284,9 +284,9 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I’m so happy you happened", "to me in this vast universe."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["I’m just really happy", "that our orbits happened to overlap."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("I’m so happy you happened to me in this vast universe.", canvas.width / 2, canvas.height / 2);
+            context.fillText("I’m just really happy that our orbits happened to overlap.", canvas.width / 2, canvas.height / 2);
         }
 
         opacity = opacity + 0.01;
